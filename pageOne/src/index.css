@@ -1,3 +1,4 @@
 :root {
-  background-image: url("../public/backgoundTest.jpg"); /* Ruta desde la carpeta public */
+  background-color: rgb(16, 16, 16); /* Ruta desde la carpeta public */
+  font-family: monospace;
 }

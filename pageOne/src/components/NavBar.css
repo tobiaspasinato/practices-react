@@ -7,8 +7,10 @@ body {
 }
 
 nav {
-    background-color: blanchedalmond;
-    color: black;
+    background-color: rgba(14, 14, 14, 0.107);
+    backdrop-filter: blur(4px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.219); /* Cambia el borde inferior */
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -33,12 +35,12 @@ nav a{
     padding: .25rem;
 }
 
-nav li-active {
-    background-color: blue;
+nav li.active {
+    background-color: rgba(84, 84, 84, 0.553);
 }
 
 nav li:hover {
-    background-color: cyan;
+    background-color: rgba(211, 211, 211, 0.625);
 }
 
 .homeSite {
