@@ -1,8 +1,15 @@
 import React from 'react'
+import "./NavBar.css"
 
 function NavBar() {
   return (
-    <div>NavBar</div>
+    <nav>
+      <a href='/' className='homeSite'>Home</a>
+      <ul>
+        <li><a href='/page1'>Page1</a></li>
+        <li><a href='/page2'>Page2</a></li>
+      </ul>
+    </nav>
   )
 }
 
