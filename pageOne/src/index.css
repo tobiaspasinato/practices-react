@@ -1,4 +1,5 @@
 :root {
   background-color: rgb(16, 16, 16); /* Ruta desde la carpeta public */
   font-family: monospace;
+  color: azure;
 }

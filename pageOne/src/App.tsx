@@ -5,23 +5,6 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  // console.log(window.location.pathname)
-  // let Component
-  // switch (window.location.pathname) {
-  //   case '/':
-  //     Component = <Home/>
-  //     break
-  //   case '/page1':
-      
-  //     break
-  //   case '/page2':
-  //     console.log('Page2')
-  //     break
-  //   default:
-  //     console.log('Not Found')
-  //     break
-  // }
-
   return (
     <>
       <NavBar />
