@@ -2,11 +2,12 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import React from 'react';
 import "./NavBar.css"
+import icon from '../assets/icon.png'; // Ajusta la ruta según tu proyecto
 
 function NavBar() {
   return (
     <nav>
-      <Link to='/' className='homeSite'>Home</Link>
+      <Link to='/' className='homeSite'><img src={icon} className="homelogo"/>Home</Link>
       <ul>
         <CustomLink to='/page1'>Page1</CustomLink>
         <CustomLink to='/page2'>Page2</CustomLink>

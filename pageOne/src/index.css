@@ -3,3 +3,16 @@
   font-family: monospace;
   color: azure;
 }
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2vh;
+}
