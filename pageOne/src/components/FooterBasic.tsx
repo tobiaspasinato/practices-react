@@ -3,6 +3,6 @@ import './FooterBasic.css'
 
 export default function FooterBasic() {
   return (
-    <footer>&copy;2025 • Tobias Pasinato </footer>
+    <footer>&copy; 2025 • Tobias Pasinato </footer>
   )
 }

@@ -16,6 +16,7 @@ function Home() {
     <div>
       <ButtonBasic onClick={handleClick}></ButtonBasic>
       {showAlert && <AlertBasic />}
+      
     </div>
   );
 }
