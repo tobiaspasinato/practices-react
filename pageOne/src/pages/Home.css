@@ -1,0 +1,13 @@
+#home{
+    background-color: #545454;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5dvb;
+}
+
+#imgPokemon{
+    width: 500px;
+    height: 500px;
+}

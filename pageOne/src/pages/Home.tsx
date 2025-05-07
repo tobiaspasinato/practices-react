@@ -1,22 +1,45 @@
 import { useState } from "react";
 import ButtonBasic from "../components/ButtonBasic";
-import AlertBasic from "../components/AlertBasic";
+import InputBasic from "../components/InputBasic";
+import "./Home.css"
 
 function Home() {
-  const [showAlert, setShowAlert] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [namePokemon, setNamePokemon] = useState("");
+  const [idPokemon, setIdPokemon] = useState(0);
+  const [imgPokemon, setImgPokemon] = useState("");
+
+
 
   function handleClick() {
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 1500);
+    fetch("https://pokeapi.co/api/v2/pokemon/" + inputValue)
+    .then((response) => {
+      return response.json();
+    }).then(
+      (data) => {
+        setNamePokemon(data.name);
+        setIdPokemon(data.id);
+        setImgPokemon(data.sprites.front_default);
+      }).catch((error) => {
+        console.error("Error fetching data:", error);
+        setNamePokemon("No se encontró el Pokémon");
+        setIdPokemon(0);
+        setImgPokemon("");
+      }
+    )
   }
 
   return (
-    <div>
-      <ButtonBasic onClick={handleClick}></ButtonBasic>
-      {showAlert && <AlertBasic />}
-      
+    <div id="home">
+      <InputBasic value={inputValue} setInputValue={setInputValue}/>
+      <ButtonBasic className="bton" onClick={handleClick}></ButtonBasic>
+      <h1>
+        {namePokemon}
+      </h1>
+      <h2>
+        {idPokemon}
+      </h2>
+      <img id="imgPokemon" src={imgPokemon}/>
     </div>
   );
 }
